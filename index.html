@@ -1,97 +1,290 @@
-<<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <title>Kiruthika A | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kiruthika | Pastel Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(-45deg, #ffd6e0, #e0f7f1, #e6e6fa, #fff5d6);
+    background-size:400% 400%;
+    animation: gradientBG 15s ease infinite;
+    color:#4a4a4a;
+    scroll-behavior:smooth;
+}
+
+@keyframes gradientBG{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
+}
+
+/* NAVBAR */
+nav{
+    display:flex;
+    justify-content:space-between;
+    padding:20px 80px;
+    background:rgba(255,255,255,0.7);
+    backdrop-filter:blur(10px);
+    position:fixed;
+    width:100%;
+}
+
+nav h2{
+    color:#8e7cc3;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#555;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#8e7cc3;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:space-around;
+    padding-top:100px;
+    flex-wrap:wrap;
+    text-align:center;
+}
+
+.hero-text h1{
+    font-size:45px;
+}
+
+.hero-text span{
+    color:#8e7cc3;
+}
+
+.hero-text p{
+    margin:20px 0;
+}
+
+.btn{
+    padding:12px 30px;
+    background:#8e7cc3;
+    border:none;
+    border-radius:25px;
+    color:white;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#6f5fa6;
+    transform:scale(1.05);
+}
+
+/* PHOTO STYLE */
+.hero img{
+    width:260px;
+    height:260px;
+    object-fit:cover;
+    border-radius:50%;
+    border:6px solid #ffffff;
+    box-shadow:0 10px 40px rgba(0,0,0,0.2);
+    margin-top:30px;
+}
+
+/* SECTION */
+section{
+    padding:100px 80px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:32px;
+    margin-bottom:40px;
+    color:#8e7cc3;
+}
+
+/* GLASS CARD */
+.glass{
+    background:rgba(255,255,255,0.6);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:40px;
+    text-align:center;
+}
+
+/* SKILLS */
+.skills-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+.skill{
+    background:white;
+    padding:15px 25px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.skill:hover{
+    background:#e6e6fa;
+    transform:translateY(-5px);
+}
+
+/* PROJECTS */
+.projects{
+    display:flex;
+    gap:25px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.project-card{
+    background:white;
+    padding:25px;
+    width:250px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+.project-card:hover{
+    transform:translateY(-8px);
+}
+
+.contact{
+    text-align:center;
+}
+
+footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(255,255,255,0.6);
+}
+
+/* Responsive */
+@media(max-width:768px){
+    nav{
+        padding:20px;
+    }
+    section{
+        padding:60px 20px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
-  <nav>
-    <h1>Kiruthika A</h1>
+<nav>
+    <h2>Kiruthika</h2>
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#resume">Resume</a></li>
-      <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
     </ul>
-  </nav>
+</nav>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h2>Innovating Smart Solutions for Real-World Challenges</h2>
-    <p>IT Engineering Student | IoT Enthusiast | Web Developer</p>
-  </section>
-
-  <!-- ABOUT ME -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am an enthusiastic and dedicated Information Technology engineering student with a strong passion for building innovative and practical technology solutions. I am deeply interested in the fields of Internet of Things (IoT), embedded systems, and web development. I enjoy transforming ideas into meaningful projects that solve real-world problems and improve everyday life through technology.
-      
-      Throughout my academic journey, I have continuously focused on strengthening my technical foundation in programming, system design, and problem-solving. I believe in learning by doing, which motivates me to work on hands-on projects that enhance both my knowledge and confidence. One of my key projects, FEMSAFE – Women’s Safety Smart Gloves, reflects my interest in combining hardware and software to create impactful safety solutions.
-      
-      Apart from technical skills, I value teamwork, adaptability, and clear communication. I enjoy collaborating with others, sharing ideas, and contributing positively to group projects. I am constantly exploring new technologies and upgrading my skills to stay aligned with industry trends.
-      
-      My goal is to grow into a skilled IT professional who can contribute to innovative, secure, and user-focused systems. I am eager to take up new challenges, internships, and opportunities that allow me to learn, innovate, and make a meaningful impact.
-    </p>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projects</h2>
-
-    <div class="card">
-      <h3>FEMSAFE – Women’s Safety Smart Gloves</h3>
-      <p>
-        FEMSAFE is an IoT-based wearable safety system designed to provide instant emergency assistance. 
-        The system integrates GPS tracking and GSM-based SMS alerts to send real-time location information 
-        to emergency contacts during unsafe situations.
-      </p>
-      <p><strong>Technologies:</strong> Arduino, IoT, GPS Module, GSM Module, Embedded C</p>
+<div class="hero">
+    <div class="hero-text">
+        <h1>Hello, I'm <span>Kiruthika</span></h1>
+        <h2>I am a <span class="auto-type"></span></h2>
+        <p>IT Engineering Student | Tech Innovator</p>
+        <button class="btn">Download Resume</button>
     </div>
 
-    <div class="card">
-      <h3>Personal Portfolio Website</h3>
-      <p>
-        Designed and developed a responsive portfolio website to showcase projects, technical skills, 
-        and resume using HTML and CSS.
-      </p>
-      <p><strong>Technologies:</strong> HTML, CSS</p>
+    <!-- YOUR PHOTO -->
+    <img src="kiruthika.jpg" alt="Kiruthika Photo">
+</div>
+
+<section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="glass">
+        <p>
+        Passionate IT student building meaningful tech solutions.
+        Creator of Urban Gardening Smart App and FemSafe Women Safety Application.
+        I love turning ideas into impactful digital experiences.
+        </p>
     </div>
+</section>
 
-  </section>
-
-  <!-- SKILLS -->
-  <section id="skills">
-    <h2>Technical Skills</h2>
+<section id="skills">
+    <h2 class="section-title">My Skills</h2>
     <div class="skills-container">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>C Programming</span>
-      <span>Arduino Programming</span>
-      <span>IoT Integration</span>
-      <span>GPS & GSM Modules</span>
-      <span>Problem Solving</span>
-      <span>Team Collaboration</span>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">Python</div>
+        <div class="skill">IoT</div>
     </div>
-  </section>
+</section>
 
-  <!-- RESUME -->
-  <section id="resume">
-    <h2>Resume</h2>
-    <a href="resume.pdf" target="_blank" class="btn">View Resume</a>
-  </section>
+<section id="projects">
+    <h2 class="section-title">Projects</h2>
+    <div class="projects">
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: kiruthikaandavar@gmail.com</p>
-    <p>Phone: +91 877XX 96XXX</p>
-  </section>
+        <div class="project-card">
+            <h3>🌱 Urban Gardening App</h3>
+            <p>Smart irrigation system with IoT integration.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>🛡️ FemSafe</h3>
+            <p>Women safety app with live location tracking and SOS alert system.</p>
+        </div>
+
+        <div class="project-card">
+            <h3>🤖 AI Waste Management</h3>
+            <p>AI + IoT based garbage monitoring system.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2 class="section-title">Contact Me</h2>
+    <div class="contact">
+        <p>Email: kiruthikaandavar@gmail.com</p>
+        <p>Number: 877XX 97XXX</p>
+        <p>LinkedIn: Kiruthika Andavar</p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Kiruthika | Designed with 🌸
+</footer>
+
+<script>
+var typed = new Typed(".auto-type", {
+    strings: ["Web Developer", "IoT Innovator", "Creative Thinker"],
+    typeSpeed: 100,
+    backSpeed: 50,
+    loop: true
+});
+</script>
 
 </body>
-</html>
 </html>
