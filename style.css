@@ -1,103 +1,129 @@
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+<style>
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth;
 }
 
-/* BODY */
+/* Soft Animated Background */
 body {
+  margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #fdfbfb, #ebedee);
-  color: #333;
+  background: linear-gradient(-45deg, #e3f2fd, #f3e5f5, #e8f5e9, #fce4ec);
+  background-size: 300% 300%;
+  animation: softBG 18s ease infinite;
+  color: #2c3e50;
 }
 
-/* HERO */
-.hero {
-  text-align: center;
-  padding: 70px 20px;
-  background: linear-gradient(135deg, #ff6a88, #ff99ac);
-  color: white;
+@keyframes softBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
 }
 
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: 42px;
-}
-
-.tagline {
-  margin-top: 10px;
-  font-size: 18px;
-  opacity: 0.95;
-}
-
-/* CARDS */
-.card {
-  background: white;
-  margin: 30px auto;
-  padding: 25px;
-  width: 85%;
-  max-width: 900px;
-  border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-}
-
-.card h2 {
-  margin-bottom: 15px;
-  color: #ff4d6d;
-}
-
-/* SKILLS */
-.skills {
+/* Navbar */
+nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+  justify-content: space-between;
+  padding: 18px 50px;
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
 }
 
-.skills span {
-  background: #ffe5ec;
-  padding: 8px 14px;
-  border-radius: 20px;
-  font-size: 14px;
+nav h1 {
+  color: #4a148c;
 }
 
-/* PROJECT BOX */
-.project-box {
-  background: #fff0f3;
-  padding: 18px;
-  border-radius: 12px;
-  border-left: 5px solid #ff4d6d;
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
 }
 
-/* FORM */
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-family: 'Poppins', sans-serif;
-}
-
-button {
-  background: #ff4d6d;
-  color: white;
-  padding: 12px 18px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 500;
+nav ul li a {
+  text-decoration: none;
+  color: #4a148c;
+  font-weight: 600;
   transition: 0.3s;
 }
 
-button:hover {
-  background: #e63956;
+nav ul li a:hover {
+  color: #1565c0;
 }
 
-/* FOOTER */
-footer {
+/* Hero Section */
+.hero {
   text-align: center;
-  padding: 20px;
-  color: #666;
-  font-size: 14px;
+  padding: 110px 20px;
 }
+
+.hero h2 {
+  font-size: 34px;
+  color: #4a148c;
+}
+
+/* Sections */
+section {
+  margin: 50px;
+  padding: 45px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.9);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  animation: fadeUp 1.2s ease;
+}
+
+/* Cards */
+.card {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 20px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 18px rgba(0,0,0,0.1);
+}
+
+/* Skills */
+.skills span {
+  display: inline-block;
+  padding: 8px 16px;
+  margin: 6px;
+  border-radius: 25px;
+  background: #e1bee7;
+  color: #4a148c;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  background: #bbdefb;
+  color: #0d47a1;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border-radius: 25px;
+  background: #4a148c;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #1565c0;
+  transform: scale(1.05);
+}
+
+/* Animation */
+@keyframes fadeUp {
+  from {opacity: 0; transform: translateY(30px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+</style>
